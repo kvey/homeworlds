@@ -109,6 +109,7 @@
         conn)))
 
 (defn move
+  ; can only move from different size stars
   ([p star ship-size new-star-color new-star-size]
    (when-let [placeable-piece-of-size-and-color
               (first (get-unused-pieces new-star-color new-star-size))]
